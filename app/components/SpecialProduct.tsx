@@ -61,10 +61,10 @@ export default function SpecialProduct({
         <p className="">{textAboutPrice}</p>
       </div>
       <div className="flex flex-row justify-evenly w-full">
-        <button className="text-xl p-2 px-10 bg-gray-500 text-white mt-2">
+        <button className="text-xl p-2 px-10 bg-gray-500 text-white mt-2 hover:bg-gray-600">
           ДОБАВИ
         </button>
-        <button className="text-xl p-2 px-10 bg-gray-500 text-white mt-2">
+        <button className="text-xl p-2 px-10 bg-gray-500 text-white mt-2 hover:bg-gray-600">
           ДОБАВИ
         </button>
       </div>

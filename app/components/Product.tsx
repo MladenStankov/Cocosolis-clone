@@ -43,7 +43,7 @@ export default function Product({
         <BsFillInfoCircleFill className="self-center" />
         <p className="">{textAboutPrice}</p>
       </div>
-      <button className="text-xl p-2 bg-gray-500 text-white mt-2">
+      <button className="text-xl p-2 bg-gray-500 text-white mt-2 hover:bg-gray-600">
         ДОБАВИ
       </button>
     </div>

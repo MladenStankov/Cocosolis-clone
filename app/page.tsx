@@ -4,9 +4,11 @@ import { CiSearch } from "react-icons/ci";
 import { FaCartShopping, FaPaw, FaRegUser } from "react-icons/fa6";
 import Product from "./components/Product";
 import SpecialProduct from "./components/SpecialProduct";
+import { FaStar } from "react-icons/fa6";
 
 import { FaLeaf } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
+import { AiFillDislike, AiFillLike } from "react-icons/ai";
 
 export default function Home() {
   return (
@@ -193,7 +195,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="w-screen flex h-[50px] bg-slate-400"></div>
+      <div className="w-full flex h-[50px] bg-slate-400"></div>
 
       <section className="my-16 justify-center flex flex-col">
         <div className="text-center pb-16">
@@ -583,7 +585,7 @@ export default function Home() {
           ще научат за нашите нови продукти и промоции:
         </h2>
         <input
-          type="text"
+          type="email"
           placeholder="твоят имейл адрес"
           className="w-full p-2 py-4"
         />
@@ -603,9 +605,176 @@ export default function Home() {
             и <span className="underline">Политика за личните данни.*</span>
           </p>
         </div>
-        <button className="text-white text-xl mt-5 bg-orange-400 py-2 font-semibold">
+        <button className="text-white text-xl mt-5 bg-orange-400 py-2 font-semibold hover:bg-orange-500">
           ВЛЕЗ В КЛУБА
         </button>
+      </section>
+
+      <section className="flex flex-col mx-36 py-20 gap-5">
+        <h2 className="text-5xl mb-2">ПОТРЕБИТЕЛСКИ ОТЗИВИ</h2>
+        <p className="text-xl">
+          18 369 мнения, от които 2 299 от български клиенти
+        </p>
+
+        <div className="flex flex-row justify-between ">
+          <div className="flex flex-row mt-5">
+            <div className="size-12 text-white bg-slate-400 text-center rounded-full flex justify-center items-center">
+              ДД
+            </div>
+            <div className="flex flex-col ml-5">
+              <div className="flex flex-row gap-2">
+                <p>Даниела Д.</p>
+                <p className="font-light  text-sm">потвърдена поръчка</p>
+              </div>
+              <div className="flex flex-row text-yellow-400">
+                <FaStar size={15} />
+                <FaStar size={15} />
+                <FaStar size={15} />
+                <FaStar size={15} />
+                <FaStar size={15} />
+              </div>
+              <p className="mt-3">Cocosolis</p>
+              <p className="font-light">
+                Копринено нежни масла за кожата. Ароматите са превъзходни.
+              </p>
+              <img src="https://placehold.co/100x100" className="w-1/5" />
+              <div className="flex flex-row gap-2">
+                <p className="font-thin">Mнението е за продукт</p>
+                <span className="underline">WATERMELON Suntan & Body Oil</span>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col justify-between font-thin">
+            <p className="justify-self-end text-end">08.07.2024</p>
+            <div className="flex flex-row gap-1">
+              <p>Това мнение беше ли полезно за Вас?</p>
+              <AiFillLike className="text-rose-300 self-center" />
+              <p>0</p>
+              <AiFillDislike className="text-rose-300 self-center" />
+              <p>0</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-row justify-between ">
+          <div className="flex flex-row mt-5">
+            <div className="size-12 text-white bg-slate-400 text-center rounded-full flex justify-center items-center">
+              ДД
+            </div>
+            <div className="flex flex-col ml-5">
+              <div className="flex flex-row gap-2">
+                <p>Даниела Д.</p>
+                <p className="font-light  text-sm">потвърдена поръчка</p>
+              </div>
+              <div className="flex flex-row text-yellow-400">
+                <FaStar size={15} />
+                <FaStar size={15} />
+                <FaStar size={15} />
+                <FaStar size={15} />
+                <FaStar size={15} />
+              </div>
+              <p className="mt-3">Cocosolis</p>
+              <p className="font-light">
+                Копринено нежни масла за кожата. Ароматите са превъзходни.
+              </p>
+              <img src="https://placehold.co/100x100" className="w-1/5" />
+              <div className="flex flex-row gap-2">
+                <p className="font-thin">Mнението е за продукт</p>
+                <span className="underline">WATERMELON Suntan & Body Oil</span>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col justify-between font-thin">
+            <p className="justify-self-end text-end">08.07.2024</p>
+            <div className="flex flex-row gap-1">
+              <p>Това мнение беше ли полезно за Вас?</p>
+              <AiFillLike className="text-rose-300 self-center" />
+              <p>0</p>
+              <AiFillDislike className="text-rose-300 self-center" />
+              <p>0</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-row justify-between ">
+          <div className="flex flex-row mt-5">
+            <div className="size-12 text-white bg-slate-400 text-center rounded-full flex justify-center items-center">
+              ДД
+            </div>
+            <div className="flex flex-col ml-5">
+              <div className="flex flex-row gap-2">
+                <p>Даниела Д.</p>
+                <p className="font-light  text-sm">потвърдена поръчка</p>
+              </div>
+              <div className="flex flex-row text-yellow-400">
+                <FaStar size={15} />
+                <FaStar size={15} />
+                <FaStar size={15} />
+                <FaStar size={15} />
+                <FaStar size={15} />
+              </div>
+              <p className="mt-3">Cocosolis</p>
+              <p className="font-light">
+                Копринено нежни масла за кожата. Ароматите са превъзходни.
+              </p>
+              <img src="https://placehold.co/100x100" className="w-1/5" />
+              <div className="flex flex-row gap-2">
+                <p className="font-thin">Mнението е за продукт</p>
+                <span className="underline">WATERMELON Suntan & Body Oil</span>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col justify-between font-thin">
+            <p className="justify-self-end text-end">08.07.2024</p>
+            <div className="flex flex-row gap-1">
+              <p>Това мнение беше ли полезно за Вас?</p>
+              <AiFillLike className="text-rose-300 self-center" />
+              <p>0</p>
+              <AiFillDislike className="text-rose-300 self-center" />
+              <p>0</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-row justify-between ">
+          <div className="flex flex-row mt-5">
+            <div className="size-12 text-white bg-slate-400 text-center rounded-full flex justify-center items-center">
+              ДД
+            </div>
+            <div className="flex flex-col ml-5">
+              <div className="flex flex-row gap-2">
+                <p>Даниела Д.</p>
+                <p className="font-light  text-sm">потвърдена поръчка</p>
+              </div>
+              <div className="flex flex-row text-yellow-400">
+                <FaStar size={15} />
+                <FaStar size={15} />
+                <FaStar size={15} />
+                <FaStar size={15} />
+                <FaStar size={15} />
+              </div>
+              <p className="mt-3">Cocosolis</p>
+              <p className="font-light">
+                Копринено нежни масла за кожата. Ароматите са превъзходни.
+              </p>
+              <img src="https://placehold.co/100x100" className="w-1/5" />
+              <div className="flex flex-row gap-2">
+                <p className="font-thin">Mнението е за продукт</p>
+                <span className="underline">WATERMELON Suntan & Body Oil</span>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col justify-between font-thin">
+            <p className="justify-self-end text-end">08.07.2024</p>
+            <div className="flex flex-row gap-1">
+              <p>Това мнение беше ли полезно за Вас?</p>
+              <AiFillLike className="text-rose-300 self-center" />
+              <p>0</p>
+              <AiFillDislike className="text-rose-300 self-center" />
+              <p>0</p>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
