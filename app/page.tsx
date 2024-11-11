@@ -1,101 +1,613 @@
-import Image from "next/image";
+import Link from "next/link";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { CiSearch } from "react-icons/ci";
+import { FaCartShopping, FaPaw, FaRegUser } from "react-icons/fa6";
+import Product from "./components/Product";
+import SpecialProduct from "./components/SpecialProduct";
+
+import { FaLeaf } from "react-icons/fa";
+import { CiHeart } from "react-icons/ci";
+import { IoPawOutline } from "react-icons/io5";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <header>
+        <nav className="text-zinc-600">
+          <ul className="flex flex-row gap-10 px-20 justify-center">
+            <li>
+              <Link href="#">
+                <img
+                  src="https://cocosolis.com/wp-content/uploads/cocosolis-logo.svg"
+                  className="h-[100px] w-[200px]"
+                />
+              </Link>
+            </li>
+            <div className="flex flex-row gap-10 m-10">
+              <li>
+                <Link href="#" className="hover:text-amber-200">
+                  НАЧАЛО
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-amber-200">
+                  ПРОДУКТИ
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-amber-200">
+                  CLUB
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-amber-200">
+                  ЗА НАС
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-amber-200">
+                  КОНТАКТИ
+                </Link>
+              </li>
+              <li>
+                <RxHamburgerMenu size={30} />
+              </li>
+              <li>
+                <CiSearch size={25} className="hover:cursor-pointer" />
+              </li>
+              <li className="relative hover:cursor-pointer">
+                <FaCartShopping className="absolute" size={25} />
+                <div className="absolute w-4 text-xs text-center h-4 bg-red-400 rounded-full text-white items-center left-3 -top-2">
+                  0
+                </div>
+              </li>
+              <li>
+                <div className="flex flex-row">
+                  <FaRegUser size={20} />
+                  <p className="hover:text-amber-200 ml-2 -mb-1">
+                    ВЛЕЗ В ПРОФИЛ
+                  </p>
+                </div>
+              </li>
+            </div>
+          </ul>
+        </nav>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section className="bg-orange-100 p-10 justify-center flex flex-col gap-5 py-40">
+        <div className="flex gap-2 justify-center">
+          <div className="text-orange-100 bg-[#762580] text-center content-center text-8xl p-5 min-w-32">
+            B
+          </div>
+          <div className="text-orange-100 bg-[#762580] text-center content-center text-8xl p-5 min-w-32">
+            U
+          </div>
+          <div className="text-orange-100 bg-[#762580] text-center content-center text-8xl p-5 min-w-32">
+            N
+          </div>
+          <div className="text-orange-100 bg-[#762580] text-center content-center text-8xl p-5 min-w-32">
+            D
+          </div>
+          <div className="text-orange-100 bg-[#762580] text-center content-center text-8xl p-5 min-w-32">
+            L
+          </div>
+          <div className="text-orange-100 bg-[#762580] text-center content-center text-8xl p-5 min-w-32">
+            E
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+        <h2 className="text-center text-[#762580] font-semibold text-6xl tracking-widest">
+          BLACK FRIDAY
+        </h2>
+        <button className="bg-[#762580] text-white text-3xl py-2 w-1/4 self-center">
+          ПАЗАРУВАЙ
+        </button>
+      </section>
+      <div className="bg-[#762580] text-white text-center font-light py-1">
+        * Промоцията е валидна до изчерпване на количествата.
+        <span className="underline text-white">
+          {" "}
+          Запознай се с пълните условия.
+        </span>
+      </div>
+
+      <section className="bg-amber-50 text-slate-600 pb-10">
+        <h2 className="text-center py-10 tracking-widest text-5xl">
+          ПРОМО ПАКЕТИ
+        </h2>
+        <div className="flex flex-wrap mx-10 gap-5 justify-center">
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+        </div>
+        <p className="text-center underline mt-5">РАЗГЛЕДАЙ ОЩЕ</p>
+      </section>
+
+      <section className="my-16">
+        <div className="text-center pb-16">
+          <h2 className="text-5xl">КОСА</h2>
+          <h3>Натурални продукти за силна, гъста и бляскава коса</h3>
+        </div>
+
+        <div className="flex flex-wrap mx-10 gap-5 justify-center">
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+        </div>
+      </section>
+
+      <div className="w-screen flex h-[50px] bg-slate-400"></div>
+
+      <section className="my-16 justify-center flex flex-col">
+        <div className="text-center pb-16">
+          <h2 className="text-5xl">КОЖА</h2>
+          <h3>Серията SKIN за перфектна кожа, без несъвършенства.</h3>
+        </div>
+
+        <div className="flex flex-wrap mx-10 gap-5 ml-32">
+          <SpecialProduct
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="Special HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price1={83.2}
+            price2={100}
+            volume1={110}
+            volume2={200}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+        </div>
+      </section>
+
+      <section className="my-16 justify-center flex flex-col bg-orange-100 py-10">
+        <div className="text-center pb-16">
+          <h2 className="text-5xl mt-5">ЛИЦЕ</h2>
+          <h3>
+            Високоефективни натурални продукти за подмладена и сияйна кожа
+          </h3>
+        </div>
+
+        <div className="flex flex-wrap mt-10 gap-5 ml-32">
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <img src="https://placehold.co/600x400" className="w-1/3 h-full" />
+        </div>
+      </section>
+
+      <section className="my-16 py-10">
+        <div className="text-center pb-16">
+          <h2 className="text-5xl">АВТОБРОНЗАНТИ</h2>
+          <h3>
+            За перфектен тен, без да е необходимо слънце. Постигнете естествено
+            изглеждащ, равномерен, наситен, бронзов тен.
+          </h3>
+        </div>
+
+        <div className="flex flex-wrap mx-10 gap-5 justify-center">
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+        </div>
+      </section>
+
+      <section className="my-16 bg-orange-100 py-10">
+        <div className="text-center pb-16">
+          <h2 className="text-5xl">ТЕН</h2>
+          <h3>Натурални, био масла за супер тен и сияйна кожа</h3>
+        </div>
+
+        <div className="flex flex-wrap mx-10 gap-5 justify-center">
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <SpecialProduct
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="Special HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price1={83.2}
+            price2={100}
+            volume1={110}
+            volume2={200}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <SpecialProduct
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="Special HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price1={83.2}
+            price2={100}
+            volume1={110}
+            volume2={200}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <SpecialProduct
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="Special HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price1={83.2}
+            price2={100}
+            volume1={110}
+            volume2={200}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <SpecialProduct
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="Special HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price1={83.2}
+            price2={100}
+            volume1={110}
+            volume2={200}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <SpecialProduct
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="Special HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price1={83.2}
+            price2={100}
+            volume1={110}
+            volume2={200}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <SpecialProduct
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="Special HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price1={83.2}
+            price2={100}
+            volume1={110}
+            volume2={200}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <SpecialProduct
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="Special HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price1={83.2}
+            price2={100}
+            volume1={110}
+            volume2={200}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+        </div>
+      </section>
+
+      <section className="my-16">
+        <div className="text-center pb-16">
+          <h2 className="text-5xl">БЛЯСЪК</h2>
+          <h3>Натурални продукти за елегантен блясък и грижа за кожата</h3>
+        </div>
+
+        <div className="flex flex-wrap mx-10 gap-5 justify-center">
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+        </div>
+      </section>
+
+      <section className="mt-16 bg-orange-100 py-10">
+        <div className="text-center pb-16">
+          <h2 className="text-5xl">SPF</h2>
+          <h3>Натурални, био слънцезащитни лосиони</h3>
+        </div>
+
+        <div className="flex flex-wrap mx-10 gap-5 justify-center">
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+          <Product
+            discount={20}
+            imageUrl="https://placehold.co/600x400"
+            title="DREAM HAIR"
+            subtitle="Трансформирайте косата си натурално"
+            price={83.2}
+            textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
+          />
+        </div>
+      </section>
+
+      <section className="flex flex-row bg-orange-50">
+        <div className="ml-24 flex flex-col gap-5 w-1/2 self-center">
+          <div className="flex flex-row gap-4">
+            <div className="flex bg-gray-200 rounded-full justify-center px-4 border-white border-2">
+              <FaLeaf size={50} className="self-center" />
+            </div>
+            <div>
+              <h2 className="text-2xl">Натурални и Био</h2>
+              <h3>
+                Продуктите на COCOSОLIS са винаги натурални и създадени само с
+                най-висококачествени био, студено пресовани масла.
+              </h3>
+            </div>
+          </div>
+          <div className="flex flex-row gap-4">
+            <div className="flex bg-gray-200 rounded-full justify-center px-4 border-white border-2">
+              <CiHeart size={50} className="self-center" />
+            </div>
+            <div>
+              <h2 className="text-2xl">Създадени с любов</h2>
+              <h3>
+                Създадени с любов и уважение към хората и природата. Нежни към
+                кожата. Притежаващи аромат, в който ще се влюбите
+              </h3>
+            </div>
+          </div>
+          <div className="flex flex-row gap-4">
+            <div className="flex bg-gray-200 rounded-full justify-center px-4 border-white border-2">
+              <FaPaw size={50} className="self-center" />
+            </div>
+            <div>
+              <h2 className="text-2xl">С отношение</h2>
+              <h3>
+                Без наличие на парабени, оцветители, минерални и синтетични
+                масла и разбира се, без тестване върху животни.
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div className="w-1/2">
+          <img src="https://placehold.co/800x500" />
+        </div>
+      </section>
+
+      <section className="flex flex-col bg-slate-400 text py-10 px-48">
+        <h2 className="text-white text-2xl">
+          Нека бъдем приятели! Абонирайте се, за да бъдете сред първите, които
+          ще научат за нашите нови продукти и промоции:
+        </h2>
+        <input
+          type="text"
+          placeholder="твоят имейл адрес"
+          className="w-full p-2 py-4"
+        />
+        <p className="text-white text-sm italic">
+          Моля, поставете отметка в квадратчето по-долу, за да можете да се
+          присъедините.
+        </p>
+        <div className="flex flex-row gap-2 text-white text-sm mt-2">
+          <input type="checkbox" className="size-6" />
+          <p>
+            Съгласен/на съм предоставеният от мен имейл да бъде използван, за да
+            получавам известия за новости, подаръци и бъдещи промоции, свързан с
+            продуктите COCOSOLIS, съгласно{" "}
+            <span className="underline">
+              Общите условия за ползване на сайта
+            </span>{" "}
+            и <span className="underline">Политика за личните данни.*</span>
+          </p>
+        </div>
+        <button className="text-white text-xl mt-5 bg-orange-400 py-2 font-semibold">
+          ВЛЕЗ В КЛУБА
+        </button>
+      </section>
+    </>
   );
 }
