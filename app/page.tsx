@@ -9,11 +9,12 @@ import { FaStar } from "react-icons/fa6";
 import { FaLeaf } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { AiFillDislike, AiFillLike } from "react-icons/ai";
+import SectionsNav from "./components/SectionsNav";
 
 export default function Home() {
   return (
     <>
-      <header className="sticky top-0 z-10 bg-white shadow-md">
+      <header className="sticky top-0 z-10 bg-white shadow-md flex flex-col divide-y-2">
         <nav className="text-zinc-600">
           <ul className="flex flex-row gap-10 px-20 justify-center">
             <li>
@@ -73,6 +74,7 @@ export default function Home() {
             </div>
           </ul>
         </nav>
+        <SectionsNav />
       </header>
 
       <section className="bg-orange-100 p-10 justify-center flex flex-col gap-5 py-40">
@@ -107,12 +109,11 @@ export default function Home() {
       <div className="bg-[#762580] text-white text-center font-light py-1">
         * Промоцията е валидна до изчерпване на количествата.
         <span className="underline text-white">
-          {" "}
           Запознай се с пълните условия.
         </span>
       </div>
 
-      <section className="bg-amber-50 text-slate-600 pb-10">
+      <section id="ПРОМО" className="bg-amber-50 text-slate-600 pb-10">
         <h2 className="text-center py-10 tracking-widest text-5xl">
           ПРОМО ПАКЕТИ
         </h2>
@@ -169,7 +170,7 @@ export default function Home() {
         <p className="text-center underline mt-5">РАЗГЛЕДАЙ ОЩЕ</p>
       </section>
 
-      <section className="my-16">
+      <section id="КОСА" className="my-16">
         <div className="text-center pb-16">
           <h2 className="text-5xl">КОСА</h2>
           <h3>Натурални продукти за силна, гъста и бляскава коса</h3>
@@ -197,7 +198,7 @@ export default function Home() {
 
       <div className="w-full flex h-[50px] bg-slate-400"></div>
 
-      <section className="my-16 justify-center flex flex-col">
+      <section id="КОЖА" className="my-16 justify-center flex flex-col">
         <div className="text-center pb-16">
           <h2 className="text-5xl">КОЖА</h2>
           <h3>Серията SKIN за перфектна кожа, без несъвършенства.</h3>
@@ -242,7 +243,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-16 justify-center flex flex-col bg-orange-100 py-10">
+      <section
+        id="ЛИЦЕ"
+        className="my-16 justify-center flex flex-col bg-orange-100 py-10"
+      >
         <div className="text-center pb-16">
           <h2 className="text-5xl mt-5">ЛИЦЕ</h2>
           <h3>
@@ -295,7 +299,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-16 py-10">
+      <section id="АВТОБРОНЗАНТИ" className="my-16 py-10">
         <div className="text-center pb-16">
           <h2 className="text-5xl">АВТОБРОНЗАНТИ</h2>
           <h3>
@@ -372,7 +376,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-16 bg-orange-100 py-10">
+      <section id="ТЕН" className="my-16 bg-orange-100 py-10">
         <div className="text-center pb-16">
           <h2 className="text-5xl">ТЕН</h2>
           <h3>Натурални, био масла за супер тен и сияйна кожа</h3>
@@ -475,7 +479,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-16">
+      <section id="БЛЯСЪК" className="my-16">
         <div className="text-center pb-16">
           <h2 className="text-5xl">БЛЯСЪК</h2>
           <h3>Натурални продукти за елегантен блясък и грижа за кожата</h3>
@@ -509,7 +513,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-16 bg-orange-100 py-10">
+      <section id="SPF" className="mt-16 bg-orange-100 py-10">
         <div className="text-center pb-16">
           <h2 className="text-5xl">SPF</h2>
           <h3>Натурални, био слънцезащитни лосиони</h3>
