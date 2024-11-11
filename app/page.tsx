@@ -7,12 +7,11 @@ import SpecialProduct from "./components/SpecialProduct";
 
 import { FaLeaf } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
-import { IoPawOutline } from "react-icons/io5";
 
 export default function Home() {
   return (
     <>
-      <header>
+      <header className="sticky top-0 z-10 bg-white shadow-md">
         <nav className="text-zinc-600">
           <ul className="flex flex-row gap-10 px-20 justify-center">
             <li>
@@ -290,7 +289,7 @@ export default function Home() {
             price={83.2}
             textAboutPrice=" Най-ниска цена за последните 30 дни: 104,00 лв."
           />
-          <img src="https://placehold.co/600x400" className="w-1/3 h-full" />
+          <img src="https://placehold.co/400x500" className="h-full" />
         </div>
       </section>
 
