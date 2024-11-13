@@ -29,12 +29,12 @@ export default function Product({
 
       <div className="self-center text-center max-w-full break-words mt-3">
         <h3 className="text-xl tracking-normal break-words">{title}</h3>
-        <div className="flex flex-row self-center justify-center">
-          <FaStar size={15} className="text-yellow-400 self-center" />
-          <FaStar size={15} className="text-yellow-400 self-center" />
-          <FaStar size={15} className="text-yellow-400 self-center" />
-          <FaStar size={15} className="text-yellow-400 self-center" />
-          <FaStar size={15} className="text-yellow-400 self-center" />
+        <div className="flex flex-row self-center justify-center items-center">
+          <FaStar size={15} className="text-yellow-400" />
+          <FaStar size={15} className="text-yellow-400" />
+          <FaStar size={15} className="text-yellow-400" />
+          <FaStar size={15} className="text-yellow-400" />
+          <FaStar size={15} className="text-yellow-400" />
           <p className="font-light ml-2 text-sm">758 мнения</p>
         </div>
 
