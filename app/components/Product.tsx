@@ -1,5 +1,6 @@
 import React from "react";
 import { BsFillInfoCircleFill } from "react-icons/bs";
+import { FaStar } from "react-icons/fa";
 
 interface ProductProps {
   discount: number;
@@ -28,6 +29,15 @@ export default function Product({
 
       <div className="self-center text-center max-w-full break-words mt-3">
         <h3 className="text-xl tracking-normal break-words">{title}</h3>
+        <div className="flex flex-row self-center justify-center">
+          <FaStar size={15} className="text-yellow-400 self-center" />
+          <FaStar size={15} className="text-yellow-400 self-center" />
+          <FaStar size={15} className="text-yellow-400 self-center" />
+          <FaStar size={15} className="text-yellow-400 self-center" />
+          <FaStar size={15} className="text-yellow-400 self-center" />
+          <p className="font-light ml-2 text-sm">758 мнения</p>
+        </div>
+
         <h3 className="text-base break-words tracking-normal">{subtitle}</h3>
 
         <div className="flex flex-row justify-center mt-2 text-xl gap-4">
